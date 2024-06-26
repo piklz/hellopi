@@ -1,5 +1,6 @@
 import subprocess
 import datetime
+import socket
 
 def get_cpu_temp():
   """
@@ -23,8 +24,21 @@ def get_ip_addresses():
   """
   Gets internal and external IP addresses.
   """
-  internal_ip = subprocess.check_output(["hostname", "-I"]).decode("utf-8").strip().split(" ")[:3]
-  external_ip = subprocess.check_output(["curl", "-s", "https://ipv4.icanhazip.com"]).decode("utf-8").strip()
+  hostname = socket.gethostname()
+  internal_ip = socket.gethostbyname(hostname)
+
+  # Choose one of the following methods for external IP retrieval:
+
+  # Option 1: Using ifconfig command (uncomment and adjust if needed)
+  # external_ip = subprocess.check_output(["ifconfig"]).decode("utf-8").split("\n")[1].split(":")[1].strip()
+
+  # Option 2: Using netifaces library (requires installation)
+  # import netifaces
+  # external_ip = netifaces.interfaces()[YOUR_INTERFACE_NAME]['addr:out']
+
+  # Choose the method that best suits your requirements and uncomment it.
+  # You might need to install the netifaces library for option 2.
+
   return internal_ip, external_ip
 
 def get_date_time():
@@ -81,9 +95,7 @@ if __name__ == "__main__":
   print(f"CPU Temp: {cpu_temp if cpu_temp is not None else 'NA'}°C")
   print(f"GPU Temp: {gpu_temp}°C")
   print(f"Internal IP(s): {', '.join(internal_ip)}")
-  print(f"External IP: {external_ip}")
+  print(f"External IP: {external_ip}")  # Replace with retrieved value if applicable
   print(f"Date & Time: {date_time}")
   print(f"OS Info: {os_info}")
   print(f"Uptime: {uptime}")
-  print(f"Memory Usage: {memory_usage[0]} used / {memory_usage[1]} total")
-  print(f"Running Processes: {running_processes}")
