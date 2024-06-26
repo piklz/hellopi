@@ -1,5 +1,6 @@
 # Base image
-FROM alpine
+#FROM alpine
+FROM python:alpine
 
 # Set working directory
 WORKDIR /hellopi
