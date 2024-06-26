@@ -6,5 +6,11 @@ WORKDIR /hellopi
 
 # Copy application files
 COPY hellopi.sh .
+# Copy the Python script to the container
+COPY hellopi.py .
 
-RUN echo "Hello, World! Docker hellopi is working " > /hellopitest.txt
+
+#RUN echo "Hello, World! Docker hellopi is working " > /hellopitest.txt
+
+# Run the Python script as the entrypoint
+CMD ["python", "hellopi.py"]
