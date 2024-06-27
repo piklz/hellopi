@@ -1,6 +1,6 @@
 # Base image
 #FROM alpine
-FROM python:alpine as 
+FROM python:alpine
 
 # Set working directory
 
