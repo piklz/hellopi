@@ -16,6 +16,9 @@ COPY hellopi.py .
 #permissions
 RUN chmod +x /hellopi/hellopi.py
 
+# Create a directory within the container
+RUN mkdir -p /volume/hellopi
+
 #RUN echo "Hello, World! Docker hellopi is working " > /hellopitest.txt
 
 # Run the Python script as the entrypoint
