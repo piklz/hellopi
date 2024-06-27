@@ -15,7 +15,8 @@ COPY hellopi.py .
 RUN chmod +x hellopi.py
 
 
-COPY . ./
+
+COPY hellopi.sh hellopi.py /app  # Copy 
 
 
 #RUN echo "Hello, World! Docker hellopi is working " > /hellopitest.txt
