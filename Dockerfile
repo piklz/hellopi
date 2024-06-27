@@ -1,11 +1,9 @@
 # Base image
 #FROM alpine
-FROM python:alpine
+FROM python:alpine AS BUILD_IMAGE
 
 # Set working directory
-
-RUN mkdir /volume
-WORKDIR /volume
+WORKDIR /app
 
 
 # Copy application files
@@ -14,11 +12,12 @@ COPY hellopi.sh .
 COPY hellopi.py .
 
 #permissions
-RUN chmod +x /volume/hellopi.py
+RUN chmod +x hellopi.py
 
-# Create a directory within the container
-RUN mkdir -p /volume/hellopi/
-COPY hellopi.py .
+
+# copy from build image
+COPY --from=BUILD_IMAGE /app ./
+
 
 #RUN echo "Hello, World! Docker hellopi is working " > /hellopitest.txt
 
