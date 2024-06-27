@@ -15,8 +15,7 @@ COPY hellopi.py .
 RUN chmod +x hellopi.py
 
 
-# copy from build image
-COPY --from=BUILD_IMAGE /app ./
+COPY . ./
 
 
 #RUN echo "Hello, World! Docker hellopi is working " > /hellopitest.txt
