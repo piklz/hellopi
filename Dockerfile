@@ -1,9 +1,12 @@
 # Base image
 #FROM alpine
-FROM python:alpine
+FROM python:alpine as 
 
 # Set working directory
+
+RUN mkdir /hellopi
 WORKDIR /hellopi
+
 
 # Copy application files
 COPY hellopi.sh .
