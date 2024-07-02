@@ -13,7 +13,7 @@ COPY . /app
 RUN chmod +x hellopi.py
 RUN chmod +x hellopi.sh
 
-ADD . /app/
+ADD . ./app
 
 #RUN echo "Hello, World! Docker hellopi is working " > /hellopitest.txt
 
