@@ -17,8 +17,11 @@ COPY . /app
 RUN chmod +x hellopi.py
 RUN chmod +x hellopi.sh
 
-VOLUME /app
+# Use the entrypoint script
+ENTRYPOINT ["/entrypoint.sh"]
+
+#VOLUME /app
 #RUN echo "Hello, World! Docker hellopi is working " > /hellopitest.txt
 
 # Run the Python script as the entrypoint
-CMD ["python", "main.py"]
+#CMD ["python", "main.py"]
