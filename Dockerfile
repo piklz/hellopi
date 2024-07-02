@@ -21,4 +21,4 @@ VOLUME /app
 #RUN echo "Hello, World! Docker hellopi is working " > /hellopitest.txt
 
 # Run the Python script as the entrypoint
-CMD ["python", "hellopi.py"]
+CMD ["python", "main.py"]
