@@ -5,11 +5,11 @@ FROM python:3-alpine
 # Set working directory
 WORKDIR /src
 
-COPY hellopi.sh hellopi.py /src  # Copy 
-
-#permissions
+# permissions
 RUN chmod +x hellopi.py
 
+# copy 
+COPY hellopi.sh hellopi.py /src  
 
 
 
