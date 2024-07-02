@@ -16,3 +16,5 @@ if __name__ == '__main__':
     print(f"Hello World! from {os_name} operating system on {architecture[0]} {architecture[1]} architecture")
 else:
     pass
+
+
