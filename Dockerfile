@@ -3,13 +3,13 @@
 FROM python:3-alpine
 
 # Set working directory
-WORKDIR /src
+WORKDIR /
 
 # permissions
 RUN chmod +x hellopi.py
 
 # copy 
-COPY hellopi.sh hellopi.py /src  
+COPY hellopi.sh hellopi.py /
 
 
 
