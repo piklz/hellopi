@@ -3,7 +3,7 @@
 FROM python:3-alpine
 
 # Set working directory
-WORKDIR /app
+WORKDIR app
 
 # permissions
 RUN chmod +x hellopi.py
