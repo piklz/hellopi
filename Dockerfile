@@ -2,6 +2,10 @@
 #FROM alpine
 FROM python:3-alpine
 
+# environment settings
+ENV XDG_DATA_HOME="/app" \
+XDG_CONFIG_HOME="/app"
+
 # Set working directory
 WORKDIR /app
 
