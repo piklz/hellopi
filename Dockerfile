@@ -9,7 +9,7 @@ WORKDIR /app
 RUN chmod +x hellopi.py
 RUN chmod +x hellopi.sh
 # copy 
-COPY hellopi.sh hellopi.py /app
+COPY hellopi.sh hellopi.py
 
 
 
