@@ -3,9 +3,9 @@
 FROM python:3-alpine
 
 # Set working directory
-WORKDIR /app
+WORKDIR /src
 
-COPY hellopi.sh hellopi.py /app  # Copy 
+COPY hellopi.sh hellopi.py /src  # Copy 
 
 #permissions
 RUN chmod +x hellopi.py
