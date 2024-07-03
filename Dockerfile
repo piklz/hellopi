@@ -4,18 +4,19 @@ FROM python:3-alpine
 
 LABEL maintainer piklz
 
-
+RUN mkdir /app
 # Set working directory
 WORKDIR /app
 
 
 # copy 
-COPY . .
+COPY . /app
 
 # permissions
 RUN chmod +x hellopi.py
 RUN chmod +x hellopi.sh
 RUN chmod +x entrypoint.sh
+RUN chmod +x main.py
 
 # Use the entrypoint script
 ENTRYPOINT ["/entrypoint.sh"]
