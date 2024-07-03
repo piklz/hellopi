@@ -6,7 +6,7 @@ RUN mkdir /app
 
 
 # copy 
-COPY . ./app
+COPY . ./app/
 
 # Set working directory
 WORKDIR /app
