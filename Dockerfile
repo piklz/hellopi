@@ -10,7 +10,7 @@ WORKDIR /app
 
 
 # copy 
-COPY . /app
+COPY . ./app
 
 # permissions
 RUN chmod +x hellopi.py
