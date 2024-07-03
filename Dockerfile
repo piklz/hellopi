@@ -2,9 +2,8 @@
 #FROM alpine
 FROM python:3-alpine
 
-# environment settings
-ENV XDG_DATA_HOME="/app" \
-XDG_CONFIG_HOME="/app"
+LABEL maintainer piklz
+
 
 # Set working directory
 WORKDIR /app
@@ -17,6 +16,7 @@ COPY . /app
 RUN chmod +x hellopi.py
 RUN chmod +x hellopi.sh
 
+ADD /app /app/
 # Use the entrypoint script
 ENTRYPOINT ["/entrypoint.sh"]
 
