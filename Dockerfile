@@ -1,17 +1,20 @@
 # Base image
 FROM python:3-alpine
 
-# copy 
-COPY . ./app/
-
-# Set working directory
-WORKDIR /app
 
 # permissions
 RUN chmod +x hellopi.py
 RUN chmod +x hellopi.sh
 RUN chmod +x entrypoint.sh
 RUN chmod +x main.py
+
+# copy 
+COPY . ./app/
+
+# Set working directory
+WORKDIR /app
+
+
 
 # Use the entrypoint script
 ENTRYPOINT ["/entrypoint.sh"]
