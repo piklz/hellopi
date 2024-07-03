@@ -2,8 +2,8 @@
 FROM python:3-alpine
 
 
-RUN mkdir /home/pi/app
-WORKDIR /home/pi/app
+
+WORKDIR /app
 COPY . .
 
 
