@@ -1,16 +1,15 @@
 # Base image
-#FROM alpine
 FROM python:3-alpine
 
-LABEL maintainer piklz
-
 RUN mkdir /app
-# Set working directory
-WORKDIR /app
+
 
 
 # copy 
 COPY . ./app
+
+# Set working directory
+WORKDIR /app
 
 # permissions
 RUN chmod +x hellopi.py
