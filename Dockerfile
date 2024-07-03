@@ -16,7 +16,7 @@ COPY . /app
 RUN chmod +x hellopi.py
 RUN chmod +x hellopi.sh
 
-ADD /app /app/
+ADD app /app
 # Use the entrypoint script
 ENTRYPOINT ["/entrypoint.sh"]
 
