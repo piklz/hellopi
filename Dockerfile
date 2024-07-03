@@ -2,8 +2,6 @@
 FROM python:3-alpine
 
 
-LABEL maintainer="piklz"
-
 RUN mkdir /home/pi/app
 WORKDIR /home/pi/app
 COPY . .
