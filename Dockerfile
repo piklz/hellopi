@@ -1,10 +1,6 @@
 # Base image
 FROM python:3-alpine
 
-RUN mkdir /app
-
-
-
 # copy 
 COPY . ./app/
 
