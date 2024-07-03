@@ -2,14 +2,14 @@
 FROM python:3-alpine
 
 
-
+LABEL maintainer="piklz"
 
 
 # Set working directory
-WORKDIR /app
+#WORKDIR /ap
 
 # copy 
-COPY . ./app/
+COPY . .
 
 # permissions
 RUN chmod +x hellopi.py
