@@ -19,8 +19,9 @@ ENV PYTHONUNBUFFERED=1
 
 
 
-WORKDIR /app
-COPY . .
+
+# add local files
+COPY root/ /
 
 # permissions
 RUN chmod +x main.py
