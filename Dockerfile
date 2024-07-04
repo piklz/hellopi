@@ -3,6 +3,12 @@ FROM python:3-alpine
 
 ENV XDG_DATA_HOME="/config" \
 XDG_CONFIG_HOME="/config"
+
+RUN \
+echo "**** install packages ****" && \
+  apk --no-cache add \
+    icu-data-full \
+    icu-libs && \
 mkdir -p \
     /app/Hellopi
 # make sure all messages always reach console
