@@ -17,11 +17,7 @@ RUN \
 # make sure all messages always reach console
 ENV PYTHONUNBUFFERED=1
 
-
-
-
-# add local files
-COPY root/ /
+COPY . .
 
 # permissions
 RUN chmod +x main.py
