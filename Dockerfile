@@ -19,7 +19,6 @@ ENV PYTHONUNBUFFERED=1
 
 
 WORKDIR /app
-COPY . ./
 
 COPY . .
 

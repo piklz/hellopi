@@ -4,6 +4,3 @@
 .gitattributes
 READMETEMPLATE.md
 README.md
-entrypoint.sh
-hellopi.py
-hellopi.sh
