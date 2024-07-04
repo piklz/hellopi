@@ -5,16 +5,19 @@ ENV XDG_DATA_HOME="/config" \
 XDG_CONFIG_HOME="/config"
 
 RUN \
-echo "**** install packages ****" && \
-  apk --no-cache add \
-    icu-data-full \
-    icu-libs && \
-mkdir -p \
-    /app/Hellopi
+    echo "**** install packages ****" && \
+    apk --no-cache add \
+        icu-data-full \
+        icu-libs && \
+    echo "**** mkdir hellopi ****" && \    
+    mkdir -p \
+        /app/Hellopi && \
+        chown -R root:root /app/Hellopi
+
 # make sure all messages always reach console
 ENV PYTHONUNBUFFERED=1
 
-chown -R root:root /app/Hellopi
+
 
 WORKDIR /app
 COPY . .
