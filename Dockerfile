@@ -30,7 +30,7 @@ RUN chmod +x main.py
 #VOLUME /app
 #RUN echo "Hello, World! Docker hellopi is working " > /hellopitest.txt
 
-VOLUME /config
+VOLUME /app/config
 
 # Run the Python script as the entrypoint
 CMD ["python", "main.py"]
