@@ -18,7 +18,7 @@ RUN \
 ENV PYTHONUNBUFFERED=1
 
 
-WOKRDIR /app
+WORKDIR /app
 COPY . ./
 
 COPY . .
