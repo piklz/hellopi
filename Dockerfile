@@ -17,6 +17,10 @@ RUN \
 # make sure all messages always reach console
 ENV PYTHONUNBUFFERED=1
 
+
+WOKRDIR /app
+COPY . ./
+
 COPY . .
 
 # permissions
